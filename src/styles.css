@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --default-bg-color: #AAC5C3; /* Définit une variable globale */
+  }
+  
+  body {
+    background-color: var(--default-bg-color);
+  }
+  
