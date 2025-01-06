@@ -1,1 +1,25 @@
-<p>navbar works!</p>
+<div class="container-navbar">
+    <div class="logo-navbar">
+        <img src="/logo-removebg-preview.png" alt="logo vélo cycle lyonnais">
+    </div>
+    <div class="title-navbar">
+        <p>-     Home Cycl'Home    -</p>
+    </div>
+    <div class="menu-container">
+        <div class="connexion">
+            <img src="/connexion.png" alt="connexion"  pTooltip="Connexion" tooltipPosition="left" (click)="navigateToLogin()">
+        </div>
+        <div class="menu-navbar">
+            <i class="pi pi-bars" (click)="menu.toggle($event)" pTooltip="Menu" tooltipPosition="left"></i>
+            <p-tieredmenu #menu [model]="items" [popup]="true" styleClass="menu">
+                <ng-template #item let-item let-hasSubmenu="hasSubmenu">
+                    <a [href]="item.route" class="p-tieredmenu-item-link">
+                        <span [class]="item.icon"></span>
+                        <span class="ml-2">{{ item.label }}</span>
+                        <span *ngIf="hasSubmenu" class="pi pi-angle-right ml-auto"></span>
+                    </a>
+                </ng-template>
+            </p-tieredmenu>
+        </div>
+    </div>
+</div>

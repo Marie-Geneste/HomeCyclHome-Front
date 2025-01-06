@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Orelega+One&display=swap');
+@import "primeicons/primeicons.css";
+
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #E4D8CF;
+    border-radius: 15px;
+    margin: 3rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    align-items: center;
+    box-shadow: 1.9px 3.8px 3.8px hsl(0deg 0% 0% / 0.44);
+}
+
+.logo-navbar img {
+    width: 125px;
+}
+
+.title-navbar {
+    font-family: 'Marcellus SC', serif;
+    font-size: 2.3rem;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.connexion img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.menu-navbar i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+:host ::ng-deep .menu {
+    background-color: #E4D8CF;
+    font-family: 'Marcellus SC', serif;
+    width: 25px;
+}
