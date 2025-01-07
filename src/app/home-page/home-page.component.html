@@ -2,21 +2,22 @@
     <p-card styleClass="card">
         <ng-template #title styleClass="title"> Réparez votre vélo en un clic </ng-template>
         <div class="text"> Réservez votre technicien grâce à notre service de réservation en ligne </div>
-        <div class="flex flex-col md:flex-row">
-            <div class="w-full md:w-5/12 flex flex-col items-center justify-center gap-3 py-5">
-                <div class="flex flex-col gap-2">
+        <div class="card-footer">
+            <div>
+                <div>
                     <label for="username">Veuillez renseigner votre adresse</label>
-                    <input pInputText id="adress" type="text" />
+                    <input #placesRef="ngx-places" ngx-gp-autocomplete class="input-adress" (onAddressChange)="handleAddressChange($event)"
+                    placeholder="Entrez votre adresse" />
                 </div>
-                <div class="flex">
-                    <p-button label="Confirmer" class="w-full max-w-[17.35rem]" styleClass="w-full mx-auto" />
+                <div class="confirm-adress">
+                    <p-button label="Confirmer" [disabled]="!placesRef?.place" (click)="navigateToPlanning()" />
                 </div>
             </div>
-            <div class="w-full md:w-2/12">
-                <p-divider layout="vertical" class="!flex md:!hidden"><b>OU</b></p-divider>
+            <div class="or-container">
+                <p-divider layout="vertical"><b>OU</b></p-divider>
             </div>
-            <div class="w-full md:w-5/12 flex items-center justify-center py-5">
-                <p-button label="Connexion" icon="pi pi-user-plus" severity="success" class="w-full max-w-[17.35rem]" styleClass="w-full mx-auto" />
+            <div>
+                <p-button label="Connexion" icon="pi pi-user-plus" severity="success" (click)="navigateToLogin()"/>
             </div>
         </div>
     </p-card>

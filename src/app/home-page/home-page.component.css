@@ -1,6 +1,7 @@
 @import "primeicons/primeicons.css";
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Orelega+One&display=swap');
 
+
 .main-container {
     background-image: url("../../../public/libre-roue-bicyclette-fond-noir_766625-6723.jpg");
     background-repeat: no-repeat;
@@ -33,4 +34,33 @@
 :host ::ng-deep .p-card-title {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+}
+
+.card-footer {
+    display: flex;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+:host ::ng-deep .p-divider.p-divider-vertical .p-divider-content {
+    background-color: rgba(12, 11, 11, 0.95);
+    color: white;
+}
+
+.confirm-adress {
+    margin-top: 1rem;
+}
+
+.input-adress {
+    width: 15rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.input-adress:focus {
+    border: none;
 }
