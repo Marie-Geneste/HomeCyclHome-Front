@@ -36,7 +36,7 @@ export class NavbarComponent {
             separator: true
           },
           {
-            label: 'Profil',
+            label: 'Tableau de bord',
             icon: 'pi pi-user',
             route: '/profile'
           }
